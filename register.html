@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar - JELBANK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <main class="auth">
+      <aside class="auth-brand">
+        <a href="index.html" class="logo">JELBANK</a>
+        <div class="auth-brand-text">
+          <p class="auth-tagline">Satu akun, semua setoran tercatat.</p>
+          <p>Daftar sekali, lalu setor minyak jelantah kapan saja lewat web.</p>
+        </div>
+        <div class="auth-rate">
+          <span>Nilai tukar hari ini</span>
+          <strong>Rp 3.000 per liter</strong>
+        </div>
+      </aside>
+
+      <div class="auth-panel">
+        <div class="auth-card">
+          <h1>Daftar akun</h1>
+          <p class="auth-sub">
+            Isi data diri untuk mulai menyetor minyak jelantah.
+          </p>
+
+          <form action="login.html" method="get">
+            <div class="field">
+              <label for="nama">Nama lengkap</label>
+              <input
+                type="text"
+                id="nama"
+                name="nama"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="nama@email.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="hp">Nomor HP</label>
+              <input
+                type="tel"
+                id="hp"
+                name="hp"
+                placeholder="08xxxxxxxxxx"
+                autocomplete="tel"
+                required
+              />
+            </div>
+            <!-- Kata sandi tanpa atribut name agar tidak muncul di URL saat form dikirim dengan GET -->
+            <div class="form-row">
+              <div class="field">
+                <label for="password">Kata sandi</label>
+                <input
+                  type="password"
+                  id="password"
+                  autocomplete="new-password"
+                  minlength="8"
+                  required
+                />
+                <span class="field-hint">Minimal 8 karakter.</span>
+              </div>
+              <div class="field">
+                <label for="konfirmasi">Konfirmasi kata sandi</label>
+                <input
+                  type="password"
+                  id="konfirmasi"
+                  autocomplete="new-password"
+                  minlength="8"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-meta">
+              <label class="check"
+                ><input type="checkbox" name="setuju" required /> Saya setuju
+                dengan syarat dan ketentuan JELBANK.</label
+              >
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              Daftar akun
+            </button>
+          </form>
+
+          <p class="auth-switch">
+            Sudah punya akun? <a href="login.html" class="text-link">Masuk</a>
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

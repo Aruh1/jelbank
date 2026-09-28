@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masuk - JELBANK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <main class="auth">
+      <aside class="auth-brand">
+        <a href="index.html" class="logo">JELBANK</a>
+        <div class="auth-brand-text">
+          <p class="auth-tagline">Pantau saldo jelantahmu dari satu akun.</p>
+          <p>
+            Masuk untuk setor minyak jelantah, lihat riwayat, dan cek struk
+            digital.
+          </p>
+        </div>
+        <div class="auth-rate">
+          <span>Nilai tukar hari ini</span>
+          <strong>Rp 3.000 per liter</strong>
+        </div>
+      </aside>
+
+      <div class="auth-panel">
+        <div class="auth-card">
+          <h1>Masuk</h1>
+          <p class="auth-sub">Gunakan email dan kata sandi akunmu.</p>
+
+          <form action="dashboard.html" method="get">
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="nama@email.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <!-- Kata sandi tanpa atribut name agar tidak muncul di URL saat form dikirim dengan GET -->
+            <div class="field">
+              <label for="password">Kata sandi</label>
+              <input
+                type="password"
+                id="password"
+                autocomplete="current-password"
+                required
+              />
+            </div>
+            <div class="form-meta">
+              <label class="check"
+                ><input type="checkbox" name="ingat" /> Ingat saya</label
+              >
+              <a href="#" class="text-link">Lupa kata sandi?</a>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              Masuk
+            </button>
+          </form>
+
+          <p class="auth-switch">
+            Belum punya akun?
+            <a href="register.html" class="text-link">Daftar</a>
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

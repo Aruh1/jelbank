@@ -1,201 +1,248 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JELBANK - Sistem ATM Minyak Jelantah Berbasis Web</title>
-  <meta name="description" content="JELBANK mengubah minyak jelantah jadi saldo lewat web. Setor, sistem hitung otomatis, saldo langsung masuk.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style/style.css">
-</head>
-<body>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#" class="logo">JELBANK</a>
-      <nav class="main-nav">
-        <a href="#cara-kerja">Cara kerja</a>
-        <a href="#manfaat">Manfaat</a>
-        <a href="#nilai-tukar">Nilai tukar</a>
-      </nav>
-      <a href="#" class="btn btn-login">Masuk</a>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1>Tukar minyak jelantah jadi saldo, langsung dari rumah.</h1>
-          <p class="hero-sub">JELBANK menghitung nilai setoranmu secara otomatis lewat web. Tidak perlu antre, tidak perlu mesin fisik.</p>
-          <div class="hero-actions">
-            <a href="#" class="btn btn-primary">Daftar akun</a>
-            <a href="#cara-kerja" class="btn btn-secondary">Lihat cara kerja</a>
-          </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="receipt">
-            <div class="receipt-header">
-              <span>Struk Setoran</span>
-              <span class="receipt-status">Berhasil</span>
-            </div>
-            <dl class="receipt-body">
-              <div class="receipt-row">
-                <dt>Jenis</dt>
-                <dd>Minyak Jelantah</dd>
-              </div>
-              <div class="receipt-row">
-                <dt>Volume</dt>
-                <dd>2.0 Liter</dd>
-              </div>
-              <div class="receipt-row">
-                <dt>Harga / Liter</dt>
-                <dd>Rp 3.000</dd>
-              </div>
-            </dl>
-            <div class="receipt-total">
-              <span>Saldo masuk</span>
-              <span class="receipt-amount">Rp 6.000</span>
-            </div>
-            <div class="receipt-footer">No. Transaksi JB-240917-0182</div>
-          </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JELBANK - Sistem ATM Minyak Jelantah Berbasis Web</title>
+    <meta
+      name="description"
+      content="JELBANK mengubah minyak jelantah jadi saldo lewat web. Setor, sistem hitung otomatis, saldo langsung masuk."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#" class="logo">JELBANK</a>
+        <nav class="main-nav">
+          <a href="#cara-kerja">Cara kerja</a>
+          <a href="#manfaat">Manfaat</a>
+          <a href="#nilai-tukar">Nilai tukar</a>
+        </nav>
+        <a href="#" class="btn btn-login">Masuk</a>
       </div>
-    </section>
+    </header>
 
-    <section class="how-it-works" id="cara-kerja">
-      <div class="container">
-        <h2>Cara kerja</h2>
-        <ol class="steps">
-          <li class="step">
-            <span class="step-number">1</span>
-            <h3>Daftar akun</h3>
-            <p>Isi data diri sekali lewat web, tanpa kartu fisik.</p>
-          </li>
-          <li class="step">
-            <span class="step-number">2</span>
-            <h3>Input setoran</h3>
-            <p>Catat jenis dan volume minyak jelantah yang kamu kumpulkan.</p>
-          </li>
-          <li class="step">
-            <span class="step-number">3</span>
-            <h3>Sistem hitung otomatis</h3>
-            <p>JELBANK mengonversi volume ke saldo sesuai harga berlaku.</p>
-          </li>
-          <li class="step">
-            <span class="step-number">4</span>
-            <h3>Saldo masuk</h3>
-            <p>Saldo bertambah seketika, struk digital tersimpan di akun.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="benefits" id="manfaat">
-      <div class="container">
-        <h2>Kenapa JELBANK</h2>
-        <div class="benefit-list">
-          <div class="benefit-row">
-            <span class="benefit-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M5 19c9 0 14-5 14-14 0 0-9-1-13 3S5 19 5 19z"/>
-                <path d="M5 19c3-4 6-7 10-11"/>
-              </svg>
-            </span>
-            <div>
-              <h3>Lingkungan lebih terjaga</h3>
-              <p>Jelantah tidak lagi dibuang ke saluran air atau tanah.</p>
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1>Tukar minyak jelantah jadi saldo, langsung dari rumah.</h1>
+            <p class="hero-sub">
+              JELBANK menghitung nilai setoranmu secara otomatis lewat web.
+              Tidak perlu antre, tidak perlu mesin fisik.
+            </p>
+            <div class="hero-actions">
+              <a href="#" class="btn btn-primary">Daftar akun</a>
+              <a href="#cara-kerja" class="btn btn-secondary"
+                >Lihat cara kerja</a
+              >
             </div>
           </div>
-          <div class="benefit-row">
-            <span class="benefit-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 12a8 8 0 0 1 14-5.3M20 4v4h-4"/>
-                <path d="M20 12a8 8 0 0 1-14 5.3M4 20v-4h4"/>
-              </svg>
-            </span>
-            <div>
-              <h3>Hitung otomatis</h3>
-              <p>Nilai tukar tetap dan transparan, tanpa tawar-menawar.</p>
-            </div>
-          </div>
-          <div class="benefit-row">
-            <span class="benefit-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="5" y="3" width="14" height="18" rx="1"/>
-                <path d="M8 8h8M8 12h8M8 16h5"/>
-              </svg>
-            </span>
-            <div>
-              <h3>Riwayat tercatat</h3>
-              <p>Semua transaksi tersimpan rapi dan bisa dilihat kapan saja.</p>
-            </div>
-          </div>
-          <div class="benefit-row">
-            <span class="benefit-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="9"/>
-                <path d="M3 12h18M12 3c2.5 2.6 4 6 4 9s-1.5 6.4-4 9c-2.5-2.6-4-6-4-9s1.5-6.4 4-9z"/>
-              </svg>
-            </span>
-            <div>
-              <h3>Bisa diakses di mana saja</h3>
-              <p>Cukup lewat browser, tanpa antre di mesin fisik.</p>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="receipt">
+              <div class="receipt-header">
+                <span>Struk Setoran</span>
+                <span class="receipt-status">Berhasil</span>
+              </div>
+              <dl class="receipt-body">
+                <div class="receipt-row">
+                  <dt>Jenis</dt>
+                  <dd>Minyak Jelantah</dd>
+                </div>
+                <div class="receipt-row">
+                  <dt>Volume</dt>
+                  <dd>2.0 Liter</dd>
+                </div>
+                <div class="receipt-row">
+                  <dt>Harga / Liter</dt>
+                  <dd>Rp 3.000</dd>
+                </div>
+              </dl>
+              <div class="receipt-total">
+                <span>Saldo masuk</span>
+                <span class="receipt-amount">Rp 6.000</span>
+              </div>
+              <div class="receipt-footer">No. Transaksi JB-240917-0182</div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="rates" id="nilai-tukar">
-      <div class="container">
-        <h2>Nilai tukar</h2>
-        <p class="rates-note">Contoh nilai tukar, bisa diatur admin sewaktu-waktu.</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Jenis limbah</th>
-              <th>Harga per liter</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Minyak jelantah bersih</td>
-              <td>Rp 3.000</td>
-            </tr>
-            <tr>
-              <td>Minyak jelantah bercampur air</td>
-              <td>Rp 2.000</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+      <section class="how-it-works" id="cara-kerja">
+        <div class="container">
+          <h2>Cara kerja</h2>
+          <ol class="steps">
+            <li class="step">
+              <span class="step-number">1</span>
+              <h3>Daftar akun</h3>
+              <p>Isi data diri sekali lewat web, tanpa kartu fisik.</p>
+            </li>
+            <li class="step">
+              <span class="step-number">2</span>
+              <h3>Input setoran</h3>
+              <p>Catat jenis dan volume minyak jelantah yang kamu kumpulkan.</p>
+            </li>
+            <li class="step">
+              <span class="step-number">3</span>
+              <h3>Sistem hitung otomatis</h3>
+              <p>JELBANK mengonversi volume ke saldo sesuai harga berlaku.</p>
+            </li>
+            <li class="step">
+              <span class="step-number">4</span>
+              <h3>Saldo masuk</h3>
+              <p>Saldo bertambah seketika, struk digital tersimpan di akun.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
 
-    <section class="cta-band">
-      <div class="container cta-inner">
-        <h2>Siap ubah limbah dapur jadi saldo?</h2>
-        <a href="#" class="btn btn-primary">Daftar sekarang</a>
-      </div>
-    </section>
-  </main>
+      <section class="benefits" id="manfaat">
+        <div class="container">
+          <h2>Kenapa JELBANK</h2>
+          <div class="benefit-list">
+            <div class="benefit-row">
+              <span class="benefit-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 19c9 0 14-5 14-14 0 0-9-1-13 3S5 19 5 19z" />
+                  <path d="M5 19c3-4 6-7 10-11" />
+                </svg>
+              </span>
+              <div>
+                <h3>Lingkungan lebih terjaga</h3>
+                <p>Jelantah tidak lagi dibuang ke saluran air atau tanah.</p>
+              </div>
+            </div>
+            <div class="benefit-row">
+              <span class="benefit-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M4 12a8 8 0 0 1 14-5.3M20 4v4h-4" />
+                  <path d="M20 12a8 8 0 0 1-14 5.3M4 20v-4h4" />
+                </svg>
+              </span>
+              <div>
+                <h3>Hitung otomatis</h3>
+                <p>Nilai tukar tetap dan transparan, tanpa tawar-menawar.</p>
+              </div>
+            </div>
+            <div class="benefit-row">
+              <span class="benefit-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="5" y="3" width="14" height="18" rx="1" />
+                  <path d="M8 8h8M8 12h8M8 16h5" />
+                </svg>
+              </span>
+              <div>
+                <h3>Riwayat tercatat</h3>
+                <p>
+                  Semua transaksi tersimpan rapi dan bisa dilihat kapan saja.
+                </p>
+              </div>
+            </div>
+            <div class="benefit-row">
+              <span class="benefit-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path
+                    d="M3 12h18M12 3c2.5 2.6 4 6 4 9s-1.5 6.4-4 9c-2.5-2.6-4-6-4-9s1.5-6.4 4-9z"
+                  />
+                </svg>
+              </span>
+              <div>
+                <h3>Bisa diakses di mana saja</h3>
+                <p>Cukup lewat browser, tanpa antre di mesin fisik.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <span class="logo">JELBANK</span>
-        <p>Sistem ATM minyak jelantah berbasis web.</p>
-      </div>
-      <nav class="footer-nav">
-        <a href="#cara-kerja">Cara kerja</a>
-        <a href="#manfaat">Manfaat</a>
-        <a href="#nilai-tukar">Nilai tukar</a>
-      </nav>
-    </div>
-    <p class="copyright">© 2026 JELBANK.</p>
-  </footer>
+      <section class="rates" id="nilai-tukar">
+        <div class="container">
+          <h2>Nilai tukar</h2>
+          <p class="rates-note">
+            Contoh nilai tukar, bisa diatur admin sewaktu-waktu.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Jenis limbah</th>
+                <th>Harga per liter</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Minyak jelantah bersih</td>
+                <td>Rp 3.000</td>
+              </tr>
+              <tr>
+                <td>Minyak jelantah bercampur air</td>
+                <td>Rp 2.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-</body>
+      <section class="cta-band">
+        <div class="container cta-inner">
+          <h2>Siap ubah limbah dapur jadi saldo?</h2>
+          <a href="#" class="btn btn-primary">Daftar sekarang</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <span class="logo">JELBANK</span>
+          <p>Sistem ATM minyak jelantah berbasis web.</p>
+        </div>
+        <nav class="footer-nav">
+          <a href="#cara-kerja">Cara kerja</a>
+          <a href="#manfaat">Manfaat</a>
+          <a href="#nilai-tukar">Nilai tukar</a>
+        </nav>
+      </div>
+      <p class="copyright">© 2026 JELBANK.</p>
+    </footer>
+  </body>
 </html>

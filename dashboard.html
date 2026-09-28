@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - JELBANK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div class="dash">
+      <aside class="sidebar">
+        <a href="index.html" class="logo">JELBANK</a>
+        <nav class="side-nav" aria-label="Menu dashboard">
+          <a href="#ringkasan">Ringkasan</a>
+          <a href="#setor">Setor minyak</a>
+          <a href="#struk">Struk terakhir</a>
+          <a href="#riwayat">Riwayat setoran</a>
+        </nav>
+        <a href="index.html" class="side-logout">Keluar</a>
+      </aside>
+
+      <main class="dash-main">
+        <header class="dash-top">
+          <div>
+            <h1>Halo, Siti Aminah</h1>
+            <p>Ringkasan setoran minyak jelantahmu.</p>
+          </div>
+          <div class="user-chip">
+            <span class="avatar" aria-hidden="true">SA</span>
+            <span>Siti Aminah</span>
+          </div>
+        </header>
+
+        <div class="summary" id="ringkasan">
+          <div class="balance">
+            <div>
+              <p class="balance-label">Saldo aktif</p>
+              <p class="balance-amount">Rp 46.000</p>
+            </div>
+            <a href="#setor" class="btn btn-primary">Setor minyak</a>
+          </div>
+          <div class="panel">
+            <p class="stat-label">Total setoran</p>
+            <p class="stat-value">16 liter</p>
+          </div>
+          <div class="panel">
+            <p class="stat-label">Jumlah transaksi</p>
+            <p class="stat-value">5 kali</p>
+          </div>
+        </div>
+
+        <div class="dash-grid">
+          <section class="panel" id="setor">
+            <h2>Setor minyak jelantah</h2>
+            <form action="dashboard.html" method="get">
+              <div class="field">
+                <label for="jenis">Jenis minyak</label>
+                <select id="jenis" name="jenis">
+                  <option value="bersih">
+                    Jelantah bersih (Rp 3.000 per liter)
+                  </option>
+                  <option value="campur">
+                    Jelantah bercampur air (Rp 2.000 per liter)
+                  </option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="volume">Volume (liter)</label>
+                <input
+                  type="number"
+                  id="volume"
+                  name="volume"
+                  min="0.5"
+                  step="0.5"
+                  placeholder="Contoh: 2"
+                  required
+                />
+                <span class="field-hint"
+                  >Saldo dihitung otomatis dari volume dan harga per
+                  liter.</span
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Setor sekarang
+              </button>
+            </form>
+          </section>
+
+          <section class="panel" id="struk">
+            <h2>Struk terakhir</h2>
+            <div class="receipt">
+              <div class="receipt-header">
+                <span>Struk Setoran</span>
+                <span class="receipt-status">Berhasil</span>
+              </div>
+              <dl class="receipt-body">
+                <div class="receipt-row">
+                  <dt>Tanggal</dt>
+                  <dd>26 Sep 2026</dd>
+                </div>
+                <div class="receipt-row">
+                  <dt>Jenis</dt>
+                  <dd>Jelantah bersih</dd>
+                </div>
+                <div class="receipt-row">
+                  <dt>Volume</dt>
+                  <dd>3 Liter</dd>
+                </div>
+                <div class="receipt-row">
+                  <dt>Harga / Liter</dt>
+                  <dd>Rp 3.000</dd>
+                </div>
+              </dl>
+              <div class="receipt-total">
+                <span>Saldo masuk</span>
+                <span class="receipt-amount">Rp 9.000</span>
+              </div>
+              <div class="receipt-footer">No. Transaksi JB-260926-0318</div>
+            </div>
+            <div class="panel-action">
+              <a href="#" class="btn btn-secondary">Unduh struk</a>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel" id="riwayat">
+          <h2>Riwayat setoran</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tanggal</th>
+                  <th>No. transaksi</th>
+                  <th>Jenis</th>
+                  <th class="num">Volume</th>
+                  <th class="num">Saldo masuk</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>26 Sep 2026</td>
+                  <td>JB-260926-0318</td>
+                  <td>Jelantah bersih</td>
+                  <td class="num">3 L</td>
+                  <td class="num">Rp 9.000</td>
+                  <td><span class="status">Berhasil</span></td>
+                </tr>
+                <tr>
+                  <td>19 Sep 2026</td>
+                  <td>JB-260919-0274</td>
+                  <td>Jelantah bercampur air</td>
+                  <td class="num">2 L</td>
+                  <td class="num">Rp 4.000</td>
+                  <td><span class="status">Berhasil</span></td>
+                </tr>
+                <tr>
+                  <td>12 Sep 2026</td>
+                  <td>JB-260912-0221</td>
+                  <td>Jelantah bersih</td>
+                  <td class="num">4 L</td>
+                  <td class="num">Rp 12.000</td>
+                  <td><span class="status">Berhasil</span></td>
+                </tr>
+                <tr>
+                  <td>05 Sep 2026</td>
+                  <td>JB-260905-0163</td>
+                  <td>Jelantah bersih</td>
+                  <td class="num">5 L</td>
+                  <td class="num">Rp 15.000</td>
+                  <td><span class="status">Berhasil</span></td>
+                </tr>
+                <tr>
+                  <td>29 Agu 2026</td>
+                  <td>JB-260829-0107</td>
+                  <td>Jelantah bersih</td>
+                  <td class="num">2 L</td>
+                  <td class="num">Rp 6.000</td>
+                  <td><span class="status">Berhasil</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
