@@ -385,6 +385,11 @@ tbody td {
 
 .calc h3 { font-size: 1.05rem; margin-bottom: 16px; }
 
+.calc.focused {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(47, 107, 79, 0.12);
+}
+
 .calc-row {
   display: flex;
   align-items: flex-end;

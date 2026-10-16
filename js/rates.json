@@ -1,0 +1,4 @@
+[
+  { "jenis": "bersih", "label": "Jelantah bersih", "harga": 3000 },
+  { "jenis": "campur", "label": "Jelantah bercampur air", "harga": 2000 }
+]
