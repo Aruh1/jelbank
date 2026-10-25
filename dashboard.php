@@ -1,3 +1,26 @@
+<?php
+session_start();
+
+if (empty($_SESSION['nama'])) {
+    header('Location: login.php');
+    exit;
+}
+
+function buatInisial(string $nama): string
+{
+    $kata = preg_split('/\s+/', trim($nama), -1, PREG_SPLIT_NO_EMPTY);
+    if (!$kata) {
+        return '?';
+    }
+    if (count($kata) === 1) {
+        return strtoupper(substr($kata[0], 0, 2));
+    }
+    return strtoupper(substr($kata[0], 0, 1) . substr($kata[1], 0, 1));
+}
+
+$nama = $_SESSION['nama'];
+$inisial = buatInisial($nama);
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -13,7 +36,7 @@
 
   <div class="dash">
     <aside class="sidebar">
-      <a href="index.html" class="logo">JELBANK</a>
+      <a href="index.php" class="logo">JELBANK</a>
       <nav class="side-nav" aria-label="Menu dashboard">
         <a href="#ringkasan">Ringkasan</a>
         <a href="#setor">Setor minyak</a>
@@ -21,18 +44,18 @@
         <a href="#riwayat">Riwayat setoran</a>
         <a href="#pencairan">Metode pencairan</a>
       </nav>
-      <a href="index.html" class="side-logout">Keluar</a>
+      <a href="logout.php" class="side-logout">Keluar</a>
     </aside>
 
     <main class="dash-main">
       <header class="dash-top">
         <div>
-          <h1>Halo, Rizki Pratama</h1>
+          <h1>Halo, <?= htmlspecialchars($nama) ?></h1>
           <p>Ringkasan setoran minyak jelantahmu.</p>
         </div>
         <div class="user-chip">
-          <span class="avatar" aria-hidden="true">RI</span>
-          <span>Rizki Pratama</span>
+          <span class="avatar" aria-hidden="true"><?= htmlspecialchars($inisial) ?></span>
+          <span><?= htmlspecialchars($nama) ?></span>
         </div>
       </header>
 
@@ -57,7 +80,7 @@
       <div class="dash-grid">
         <section class="panel" id="setor">
           <h2>Setor minyak jelantah</h2>
-          <form action="dashboard.html" method="get">
+          <form action="dashboard.php" method="get">
             <div class="field">
               <label for="jenis">Jenis minyak</label>
               <select id="jenis" name="jenis">
@@ -205,7 +228,7 @@
             </tbody>
           </table>
         </div>
-        <form class="add-method" action="dashboard.html" method="get">
+        <form class="add-method" action="dashboard.php" method="get">
           <div class="field">
             <label for="metode">Metode baru</label>
             <select id="metode" name="metode">
@@ -222,7 +245,9 @@
       </section>
     </main>
   </div>
+
   <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
   <script src="js/dashboard.js" defer></script>
 </body>
 </html>

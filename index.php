@@ -1,3 +1,7 @@
+<?php
+session_start();
+$sudahMasuk = !empty($_SESSION['nama']);
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -11,20 +15,26 @@
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#" class="logo">JELBANK</a>
+      <a href="index.php" class="logo">JELBANK</a>
       <nav class="main-nav" id="mainNav">
         <a href="#cara-kerja">Cara kerja</a>
         <a href="#manfaat">Manfaat</a>
         <a href="#nilai-tukar">Nilai tukar</a>
       </nav>
-      <a href="login.html" class="btn btn-login">Masuk</a>
+      <?php if ($sudahMasuk): ?>
+        <a href="dashboard.php" class="btn btn-login">Halo, <?= htmlspecialchars($_SESSION['nama']) ?></a>
+      <?php else: ?>
+        <a href="login.php" class="btn btn-login">Masuk</a>
+      <?php endif; ?>
       <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Buka menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
+
   <main>
     <section class="hero">
       <div class="container hero-inner">
@@ -32,7 +42,7 @@
           <h1>Tukar minyak jelantah jadi saldo, langsung dari rumah.</h1>
           <p class="hero-sub">JELBANK menghitung nilai setoranmu secara otomatis lewat web. Tidak perlu antre, tidak perlu mesin fisik.</p>
           <div class="hero-actions">
-            <a href="register.html" class="btn btn-primary">Daftar akun</a>
+            <a href="register.php" class="btn btn-primary">Daftar akun</a>
             <a href="#cara-kerja" class="btn btn-secondary">Lihat cara kerja</a>
           </div>
         </div>
@@ -65,6 +75,7 @@
         </div>
       </div>
     </section>
+
     <section class="how-it-works" id="cara-kerja">
       <div class="container">
         <h2>Cara kerja</h2>
@@ -92,6 +103,7 @@
         </ol>
       </div>
     </section>
+
     <section class="benefits" id="manfaat">
       <div class="container">
         <h2>Kenapa JELBANK</h2>
@@ -147,6 +159,7 @@
         </div>
       </div>
     </section>
+
     <section class="rates" id="nilai-tukar">
       <div class="container">
         <h2>Nilai tukar</h2>
@@ -169,6 +182,7 @@
             </tr>
           </tbody>
         </table>
+
         <div class="calc">
           <h3>Kalkulator cepat</h3>
           <div class="calc-row">
@@ -189,13 +203,15 @@
         </div>
       </div>
     </section>
+
     <section class="cta-band">
       <div class="container cta-inner">
         <h2>Siap ubah limbah dapur jadi saldo?</h2>
-        <a href="register.html" class="btn btn-primary">Daftar sekarang</a>
+        <a href="register.php" class="btn btn-primary">Daftar sekarang</a>
       </div>
     </section>
   </main>
+
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
@@ -210,7 +226,9 @@
     </div>
     <p class="copyright">© 2026 JELBANK.</p>
   </footer>
+
   <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
   <script src="js/script.js" defer></script>
 </body>
 </html>

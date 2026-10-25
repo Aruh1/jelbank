@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* 5) Tampilkan toast sebelum menuju halaman daftar — manipulasi DOM #5 */
-  document.querySelectorAll('a[href="register.html"]').forEach((link) => {
+  document.querySelectorAll('a[href="register.php"]').forEach((link) => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
       showToast('Menuju halaman daftar akun...');
